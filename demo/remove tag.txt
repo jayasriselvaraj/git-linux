@@ -1,0 +1,23 @@
+•	Consider a scenario where you have a script which writes some output to a file. But you accidentally ran that script twice, so your output file contains duplicate entries. Write a script to extract the duplicate entries from that file.
+
+root@Jayasri:~# cat socks.txt
+small socks.
+Big socks.
+Even in between socks.
+Orange socks.
+Blue socks.
+Big socks.
+Orange socks.
+Blue socks.
+As long as they are
+new socks.
+
+Output:
+root@Jayasri:~# awk '!a[$0]++' socks.txt
+small socks.
+Big socks.
+Even in between socks.
+Orange socks.
+Blue socks.
+As long as they are
+new socks.
