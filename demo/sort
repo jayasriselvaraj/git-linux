@@ -1,0 +1,49 @@
+                                      Sort
+
+Sort command is used to sort the content of a file In an order. In addition to the basic function, there are some options available like:
+-o  writes the output of the sort into a new file.
+-r  writes the output in the reverse order.
+-n  sort the files numerically.
+-nr sort the numerical file in the reserve order.
+-k sort the file based on the column mentioned (2nd column or 3rd column etc..)
+-u  Removes the duplicate
+-c checks if the file is sorted or not.
+-m sorts by month.
+
+Example1. Sort in alphabetical order:
+ root@Jayasri:~# sort fruits.txt
+ apple
+ banana
+ kiwi
+ orange
+ peaches
+strawberry
+Example2. sort in reverse order:
+root@Jayasri:~# sort fruits.txt -r
+
+strawberry
+peaches
+orange
+kiwi
+banana
+apple
+
+Example3: save the sorted file to another file:
+root@Jayasri:~# sort fruits.txt -n > fruits_sorted.txt
+Use cat command on the output file, this will be its contents:
+root@Jayasri:~# cat fruits_sorted.txt
+apple
+banana
+kiwi
+orange
+peaches
+strawberry
+
+Example4: Remove the duplicates:
+root@Jayasri:~# sort fruits.txt -u
+apple
+banana
+kiwi
+orange
+peaches
+strawberry
